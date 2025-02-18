@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Mi Proyecto con Bootstrap 5.0.2</title>
+
+  <!-- Enlace a Bootstrap 5.0.2 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+  <link rel="stylesheet" href="Onboarding.css">
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+
+</head>
+<body>
+
+  <!-- Barra de navegación -->
+  <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <div class="container-fluid">
+      <a class="navbar-brand" href="#">Mi Proyecto</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Acerca de</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Servicios</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="#">Contacto</a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Contenedor principal -->
+  <div class="container mt-4">
+    <div class="row">
+    
+      <!-- Button trigger modal -->
+<button type="button" class="btn btn-primario" data-bs-toggle="modal" data-bs-target="#exampleModal">
+    Abrir Onboarding
+  </button>
+  
+  <!-- Modal -->
+   
+  <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" data-bs-backdrop="static" aria-hidden="true">
+    <div class="modal-dialog modal-dialog-centered modal-onboarding">
+      <div class="modal-content">
+        <!-- <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div> -->
+        <div class="modal-body">
+            
+            <div class="d-flex align-items-start">
+                <div class="nav flex-column nav-pills nav-container-onboarding" id="v-pills-tab" role="tablist" aria-orientation="vertical">
+                    <h1>Novedades</h1>
+                    <div class="lineas-div">
+                        <div class="linea-verde"></div>
+                        <div class="linea-naranja"></div>
+                        <div class="linea-amarilla"></div>
+                        <div class="linea-verde-2"></div>
+                    </div>
+                  <button class="nav-link active" id="v-pills-home-tab" data-bs-toggle="pill" data-bs-target="#v-pills-home" type="button" role="tab" aria-controls="v-pills-home" aria-selected="true">Trabajo de planilla con anticipación</button>
+                  <button class="nav-link" id="v-pills-profile-tab" data-bs-toggle="pill" data-bs-target="#v-pills-profile" type="button" role="tab" aria-controls="v-pills-profile" aria-selected="false">Autoguardado</button>
+                  <button class="nav-link" id="v-pills-messages-tab" data-bs-toggle="pill" data-bs-target="#v-pills-messages" type="button" role="tab" aria-controls="v-pills-messages" aria-selected="false">Historial plantilla preliminar</button>
+                </div>
+                <div class="tab-content" id="v-pills-tabContent">
+                    
+                  <div class="tab-pane fade show tab-container active" id="v-pills-home" role="tabpanel" aria-labelledby="v-pills-home-tab">
+                    <div class="container-clouse-button">
+                        <div class="titulo-boton-close">
+                            <!-- <button type="button" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                        <h1 class="novedades-mobile">Novedades</h1>
+                        <a data-bs-dismiss="modal" aria-label="Close" class="btn-close-ins">
+                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.5 7L7.5 17M7.5 7L17.5 17" stroke="#086378" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                
+                        </a>
+                        </div>
+                        <div class="lineas-div lineas-div-mobile">
+                            <div class="linea-verde"></div>
+                            <div class="linea-naranja"></div>
+                            <div class="linea-amarilla"></div>
+                            <div class="linea-verde-2"></div>
+                        </div>
+                    </div>
+                    
+                    <div class="image-container">
+                        <img src="assets/imagen1.jpg" alt="Trabajo de planilla con anticipación" class="img-fluid">
+                    </div>
+                    <div class="dots-container">
+                        <div class="dot dot-1 dot-active"></div>
+                        <div class="dot dot-2" onclick="switchTab('v-pills-profile-tab')"></div>
+                        <div class="dot dot-3" onclick="switchTab('v-pills-messages-tab')"></div>
+                    </div>
+                    <div class="text-container">
+                        <h5>
+                            Trabajo de planilla con anticipación
+                        </h5>
+                        <p>
+                            La sección Registro de Planilla le permite gestionar con anticipación los datos de los trabajadores y realizar ajustes mediante una planilla preliminar antes de la presentación.
+                        </p>
+
+                        <div class="button-container">
+                            <butto onclick="switchTab('v-pills-profile-tab')" class="btn btn-primario">Siguiente <i class="bi bi-chevron-right"></i></butto>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade tab-container" id="v-pills-profile" role="tabpanel" aria-labelledby="v-pills-profile-tab">
+                    <div class="container-clouse-button">
+                        <div class="titulo-boton-close">
+                            <!-- <button type="button" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                        <h1 class="novedades-mobile">Novedades</h1>
+                        <a data-bs-dismiss="modal" aria-label="Close" class="btn-close-ins" onclick="resetToFirstTab()">
+                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.5 7L7.5 17M7.5 7L17.5 17" stroke="#086378" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                
+                        </a>
+                        </div>
+                        <div class="lineas-div lineas-div-mobile">
+                            <div class="linea-verde"></div>
+                            <div class="linea-naranja"></div>
+                            <div class="linea-amarilla"></div>
+                            <div class="linea-verde-2"></div>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="assets/imagen2.jpg" alt="Autoguardado" class="img-fluid">
+                    </div>
+                    <div class="dots-container">
+                        <div class="dot dot-1" onclick="switchTab('v-pills-home-tab')"></div>
+                        <div class="dot dot-2 dot-active"></div>
+                        <div class="dot dot-3" onclick="switchTab('v-pills-messages-tab')"></div>
+                    </div>
+                    <div class="text-container">
+                        <h5>
+                            Autoguardado
+                        </h5>
+                        <p>
+                            Trabaje en línea a su ritmo con la función de autoguardado, que guarda automáticamente toda la información editada o agregada, asegurando que no se pierda ningún cambio.
+                        </p>
+
+                        <div class="button-container">
+                            <button onclick="switchTab('v-pills-messages-tab')" class="btn btn-primario">Siguiente <i class="bi bi-chevron-right"></i></button>
+                        </div>
+                    </div>
+                  </div>
+                  <div class="tab-pane fade tab-container" id="v-pills-messages" role="tabpanel" aria-labelledby="v-pills-messages-tab">
+                    <div class="container-clouse-button">
+                        <div class="titulo-boton-close">
+                            <!-- <button type="button" data-bs-dismiss="modal" aria-label="Close"></button> -->
+                        <h1 class="novedades-mobile">Novedades</h1>
+                        <a data-bs-dismiss="modal" aria-label="Close" class="btn-close-ins" onclick="resetToFirstTab()">
+                            <svg width="25" height="24" viewBox="0 0 25 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M17.5 7L7.5 17M7.5 7L17.5 17" stroke="#086378" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                                </svg>                                
+                        </a>
+                        </div>
+                        <div class="lineas-div lineas-div-mobile">
+                            <div class="linea-verde"></div>
+                            <div class="linea-naranja"></div>
+                            <div class="linea-amarilla"></div>
+                            <div class="linea-verde-2"></div>
+                        </div>
+                    </div>
+                    <div class="image-container">
+                        <img src="assets/imagen3.jpg" alt="Historial plantilla preliminar" class="img-fluid">
+                    </div>
+                    <div class="dots-container">
+                        <div class="dot dot-1" onclick="switchTab('v-pills-home-tab')"></div>
+                        <div class="dot dot-2" onclick="switchTab('v-pills-profile-tab')"></div>
+                        <div class="dot dot-3 dot-active"></div>
+                    </div>
+                    <div class="text-container">
+                        <h5>
+                            Historial plantilla preliminar
+                        </h5>
+                        <p>
+                            En la sección Historial de Planilla Preliminar, encontrará la planilla en la que estaba trabajando, para continuar editándola y agregando datos según lo necesite antes de su presentación en el periodo de recepción.
+                        </p>
+
+                        <div class="button-container">
+                            <button data-bs-dismiss="modal" aria-label="Close" class="btn btn-primario" onclick="resetToFirstTab()">Salir <i class="bi bi-chevron-right"></i></button>
+                        </div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+      </div>
+    </div>
+  </div>
+      
+    </div>
+  </div>
+
+  <!-- Pie de página -->
+  <footer class="bg-light py-3 mt-4">
+    <div class="container text-center">
+      <p class="mb-0">© 2025 Mi Proyecto. Todos los derechos reservados.</p>
+    </div>
+  </footer>
+
+  <!-- Enlace a los scripts de Bootstrap 5.0.2 -->
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js" integrity="sha384-IQsoLXl5PILFhosVNubq5LC7Qb9DXgDA9i+tQ8Zj3iwWAwPtgFTxbJ8NT4GN1R8p" crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.min.js" integrity="sha384-cVKIPhGWiC2Al4u+LWgxfKTRIcfu0JTxR+EQDz/bgldoEyl4H0zUF0QKbrJ0EcQF" crossorigin="anonymous"></script>
+
+   <script>
+    // $(document).ready(function() {
+      
+    // });
+    $(window).on('load', function() {
+        $('#exampleModal').modal('show');
+    });
+    function switchTab(tabId) {
+        var tab = new bootstrap.Tab(document.getElementById(tabId));
+        tab.show();
+    }
+
+    function resetToFirstTab() {
+        switchTab('v-pills-home-tab');
+    }
+  </script> 
+</body>
+</html>
