@@ -1,0 +1,391 @@
+/* Cargar la tipografía local con @font-face  y todas sus variantes */
+@font-face {
+    font-family: 'MiFuente';
+    src: url('fonts/segoeui.ttf') format('tts');
+    font-weight: 400;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MiFuente';
+    src: url('fonts/segoeuib.ttf') format('tts');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'MiFuente';
+    src: url('fonts/segoeuisl.ttf') format('tts');
+    font-weight: 400;
+    font-style: italic;
+}
+  
+  /* Usar la tipografía en el body */
+  body {
+    
+    font-family: 'MiFuente', sans-serif; /* Usar 'MiFuente' y como respaldo una tipografía sans-serif */
+  }
+
+
+.modal-onboarding {
+    .nav {
+        border-radius: 1.5rem 0 0 1.5rem;
+    }
+    h1 {
+        color: #fff;
+        font-weight: 700;
+        font-size: 28px;
+        line-height: 34px;
+        letter-spacing: 0px;
+    }
+
+    .nav-link {
+        color: #fff;
+        padding: 1.13rem 1rem;
+        font-size: 17px;
+        text-align: left;
+    }
+
+    .nav-link.active {
+        background-color: inherit;
+        border-left: 3px solid #BAD431;
+        border-radius: 0px;
+    }
+}
+
+.lineas-div {
+    display: flex; 
+    /* justify-content: center; */
+    div {
+        border-radius: 8px;
+    }
+  }
+
+
+  .linea-verde {
+    background-color: #BAD431;
+}
+
+.linea-naranja {
+    background-color: #F49020;
+}
+
+.linea-amarilla {
+    background-color: #FFCD34;
+}
+
+.linea-verde-2 {
+    background-color: #00AE8B;
+}
+
+.lineas-div {
+    margin-bottom: 1rem;
+    div {
+        height: 8px; 
+        margin: 0 3px;
+    }
+
+    .linea-verde {
+        width: 12.43%;
+        margin-left: 0;
+    }
+    .linea-naranja {
+        width: 17.92%;
+    }
+
+    .linea-amarilla {
+        width: 5.06%;
+    }
+
+    .linea-verde-2 {
+        width: 49.89%;
+    }
+}
+
+.text-container {
+    border-radius: 0 0 1.5rem 0;
+    padding: 1rem;
+    background: #E4EDEF;
+    color:#064350;
+    h5 {
+        font-weight: 700;
+    }
+    P {
+        color: #1B1D1F;
+    }
+}
+
+.btn-close-ins {
+    cursor: pointer;
+    border: 2px solid #086378;
+    border-radius: 50%;
+    width: 44px;
+    height: 44px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.btn-close-ins:hover {
+    background: #E4EDEF;
+    color: #fff;
+}
+
+.btn-close-ins:focus {
+    border: 2px solid transparent;
+}
+
+@media (max-width:767px) {
+    .modal-body {
+        padding: 0;
+    }
+    .modal-onboarding {
+        .nav {
+            display: none;
+        }
+    }
+
+    .container-clouse-button {
+        background-color: #064350;
+        border-radius:1.5rem 1.5rem 0 0;
+    }
+
+    .titulo-boton-close {
+        display: flex;
+
+        .btn-close-ins {
+            margin-left: auto;
+        }
+    }
+
+    .text-container {
+        border-radius: 0 0 1.5rem 1.5rem;
+    }
+
+    .btn-close-ins {
+        background: #E2E2E233;
+        border: 2px solid #E2E2E233;
+        path {
+            stroke: #fff;
+        }
+    }
+
+    .btn-close-ins:hover {
+        border: 2px solid #DCDFE280;
+        background: #E2E2E233;
+    }
+
+    .btn-close-ins:focus {
+        border: 2px solid transparent;
+        background: #FCFCFC08;
+    }
+
+    .lineas-div {
+        margin-bottom: 0;
+        margin-top: 2rem;
+
+        .linea-verde {
+            width: 14.43%;
+            margin-left: 0;
+        }
+        .linea-naranja {
+            width: 20.92%;
+        }
+    
+        .linea-amarilla {
+            width: 8.06%;
+        }
+    
+        .linea-verde-2 {
+            width: 52.89%;
+        }
+    }
+    
+    .dots-container {
+        display: flex;
+        justify-content: center;
+        margin-bottom: 1rem;
+        .dot {
+            width: 24px;
+            height: 24px;
+            background: #D6D6D6;
+            border-radius: 50%;
+            margin: 0 5px;
+            cursor: pointer;
+        }
+
+        .dot-active {
+            background: #BAD431;;
+        }
+    }
+
+    .btn-primario {
+        width: 100%;
+    }
+
+    .image-container {
+        img {
+            max-width: 80%;
+        }
+    }
+
+    .modal {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}
+
+/* hacer media query para 768px a 781px */
+
+
+  @media (min-width: 768px) {
+    /* Estilos para pantallas de 768px en adelante */
+    .modal-onboarding {
+        min-width: 95%;
+
+        h1 {
+            font-size: 28px;
+            margin: 1rem 2rem 2rem 0rem;
+        }
+
+        .nav {
+            background-color: #064350;
+            min-width: 36.6%;
+            min-height: 648px;
+        }
+
+        .modal-body {
+            padding: 0;
+        }
+    }
+
+    .novedades-mobile, .lineas-div-mobile {
+        display: none;
+    }
+
+    /* .lineas-div {
+        margin-bottom: 1rem;
+        div {
+            height: 8px; 
+            margin: 0 3px;
+        }
+
+        .linea-verde {
+            width: 12.43%;
+            margin-left: 0;
+        }
+        .linea-naranja {
+            width: 17.92%;
+        }
+
+        .linea-amarilla {
+            width: 5.06%;
+        }
+
+        .linea-verde-2 {
+            width: 49.89%;
+        }
+    } */
+
+    .nav-link {
+        display: inline-flex;
+    }
+
+    .nav-container-onboarding {
+        padding: 1rem;
+    }
+
+    .tab-container, .tab-content>.active {
+        min-height: 648px;
+        display: flex;
+        flex-direction: column;
+
+        .text-container {
+            margin-top: auto;
+        }
+    }
+
+    .container-clouse-button {
+        display: flex;
+        justify-content: flex-end;
+    }
+    
+    .dots-container {
+        display: none;
+    }
+  }
+ 
+  @media (min-width: 768px) and (max-width: 918px) {
+    .modal-onboarding {
+        .nav {
+            min-height: 671px;
+        }
+    }
+
+    .tab-container, .tab-content>.active {
+        min-height: 671px;
+    }
+}
+
+  @media (min-width: 992px) {
+    /* Estilos para pantallas de 992px en adelante */
+    .modal-onboarding {
+        min-width: 933px;
+
+        h1 {
+            font-size: 28px;
+            margin: 1rem 2rem 2rem 0rem;
+        }
+
+        .nav {
+            background-color: #064350;
+            min-width: 340px;
+            min-height: 648px;
+        }
+
+        .modal-body {
+            padding: 0;
+        }
+    }
+  }
+  
+
+.tab-content {
+    width: 100%;
+}
+
+.container-clouse-button {
+    padding: 1rem;
+}
+
+.image-container {
+    text-align: center;
+}
+
+.button-container {
+    text-align: right;
+}
+
+.btn-primario {
+    background: #086378;
+    color: #fff;
+    border-radius: 2rem;
+    padding: .51rem 1.23rem;
+    border: 2px solid transparent;
+}
+
+.btn-primario:hover {
+    background: #BAD431;
+    border: 2px solid #064350;
+    color: #064350;
+}
+
+.btn-primario:focus {
+    background: #064350;
+    border: 2px solid #064350;
+    color: #BAD431;
+}
+
+.modal-content {
+    border-radius: 1.7rem;
+}
